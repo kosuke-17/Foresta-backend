@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="-SmZYSLaklfBI4JRPdJP" name="ER図_日本語">
-        <mxGraphModel dx="1022" dy="680" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2190" dy="907" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -125,7 +125,7 @@
                 <mxCell id="260" value="" style="group" vertex="1" connectable="0" parent="95">
                     <mxGeometry width="252" height="240" as="geometry"/>
                 </mxCell>
-                <mxCell id="72" value="学習Stack" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="260" vertex="1">
+                <mxCell id="72" value="学習log" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="260" vertex="1">
                     <mxGeometry width="240" height="240" as="geometry">
                         <mxRectangle width="90" height="40" as="alternateBounds"/>
                     </mxGeometry>
@@ -369,7 +369,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="212" value="" style="group" vertex="1" connectable="0" parent="1">
-                    <mxGeometry x="1800" y="960" width="240" height="160" as="geometry"/>
+                    <mxGeometry x="560" y="720" width="240" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="34" value="" style="group" parent="212" vertex="1" connectable="0">
                     <mxGeometry width="240" height="160" as="geometry"/>
@@ -422,25 +422,20 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="214" value="" style="group" vertex="1" connectable="0" parent="1">
-                    <mxGeometry x="2120" y="960" width="200" height="200" as="geometry"/>
-                </mxCell>
-                <mxCell id="31" value="習得している : boolean" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" parent="214" vertex="1">
-                    <mxGeometry x="40" y="120" width="160" height="40" as="geometry">
-                        <mxRectangle width="210" height="40" as="alternateBounds"/>
-                    </mxGeometry>
+                    <mxGeometry x="840" y="720" width="200" height="200" as="geometry"/>
                 </mxCell>
                 <mxCell id="206" value="テックブランチID : string" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="214">
-                    <mxGeometry x="40" y="160" width="160" height="40" as="geometry">
+                    <mxGeometry x="40" y="166.66666666666669" width="160" height="33.333333333333336" as="geometry">
                         <mxRectangle width="210" height="40" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="207" value="FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;" vertex="1" parent="214">
-                    <mxGeometry y="160" width="30.719999999999995" height="40" as="geometry">
+                    <mxGeometry y="160" width="40" height="40" as="geometry">
                         <mxRectangle width="40" height="40" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="213" value="" style="group" vertex="1" connectable="0" parent="214">
-                    <mxGeometry width="199.67999999999998" height="200" as="geometry"/>
+                    <mxGeometry width="199.68" height="200" as="geometry"/>
                 </mxCell>
                 <mxCell id="20" value="テックリーフ(useState)" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="213" vertex="1">
                     <mxGeometry width="199.67999999999998" height="200" as="geometry">
@@ -475,18 +470,29 @@
                 </mxCell>
                 <mxCell id="32" value="" style="endArrow=none;html=1;" parent="213" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="39.717439999999996" y="160" as="sourcePoint"/>
-                        <mxPoint x="39.717439999999996" y="120" as="targetPoint"/>
+                        <mxPoint x="40" y="133.33333333333334" as="sourcePoint"/>
+                        <mxPoint x="40" y="100" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="208" value="" style="endArrow=none;html=1;" edge="1" parent="213">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
-                        <mxPoint x="39.72" y="200" as="sourcePoint"/>
-                        <mxPoint x="39.72" y="160" as="targetPoint"/>
+                        <mxPoint x="40" y="166.66666666666669" as="sourcePoint"/>
+                        <mxPoint x="40" y="130" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="習得している : boolean" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" parent="213" vertex="1">
+                    <mxGeometry x="39.68" y="120" width="160" height="40" as="geometry">
+                        <mxRectangle width="210" height="40" as="alternateBounds"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="738" value="" style="endArrow=none;html=1;" edge="1" parent="214">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="40" y="200" as="sourcePoint"/>
+                        <mxPoint x="40" y="163.33333333333334" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="215" value="" style="group" vertex="1" connectable="0" parent="1">
-                    <mxGeometry x="1160" y="960" width="260" height="160" as="geometry"/>
+                    <mxGeometry x="-90" y="720" width="260" height="160" as="geometry"/>
                 </mxCell>
                 <mxCell id="47" value="" style="group" parent="215" vertex="1" connectable="0">
                     <mxGeometry width="260" height="160" as="geometry"/>
@@ -1579,7 +1585,7 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="663" value="" style="group" vertex="1" connectable="0" parent="1">
-                    <mxGeometry x="1480" y="960" width="260.00000000000006" height="200" as="geometry"/>
+                    <mxGeometry x="230" y="720" width="260.00000000000006" height="200" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="テックツリー(react)" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" parent="663" vertex="1">
                     <mxGeometry width="240" height="200" as="geometry">
@@ -1646,35 +1652,29 @@
                 </mxCell>
                 <mxCell id="666" value="" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="49">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
-                        <mxPoint x="1520" y="1270" as="sourcePoint"/>
-                        <mxPoint x="1480" y="1140" as="targetPoint"/>
+                        <mxPoint x="270" y="1030" as="sourcePoint"/>
+                        <mxPoint x="230" y="900" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="667" value="" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
-                        <mxPoint x="1720" y="1020" as="sourcePoint"/>
-                        <mxPoint x="1800" y="1100" as="targetPoint"/>
+                        <mxPoint x="470" y="780" as="sourcePoint"/>
+                        <mxPoint x="560" y="860" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="668" value="" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1">
+                <mxCell id="668" value="" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" edge="1" parent="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
-                        <mxPoint x="2040" y="1020" as="sourcePoint"/>
-                        <mxPoint x="2120" y="1140" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="704" value="" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="98" target="729">
-                    <mxGeometry width="100" height="100" relative="1" as="geometry">
-                        <mxPoint x="830" y="1380" as="sourcePoint"/>
-                        <mxPoint x="840" y="1100" as="targetPoint"/>
+                        <mxPoint x="800" y="780" as="sourcePoint"/>
+                        <mxPoint x="840" y="900" as="targetPoint"/>
                         <Array as="points">
-                            <mxPoint x="800" y="1240"/>
+                            <mxPoint x="810" y="860"/>
                         </Array>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="712" value="" style="group" vertex="1" connectable="0" parent="1">
                     <mxGeometry x="1480" y="1400" width="200" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="677" value="学習Stack_スキル" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" vertex="1" parent="712">
+                <mxCell id="677" value="学習log_スキル" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" vertex="1" parent="712">
                     <mxGeometry width="200.00000000000009" height="120" as="geometry">
                         <mxRectangle width="90" height="40" as="alternateBounds"/>
                     </mxGeometry>
@@ -1687,7 +1687,7 @@
                         <mxRectangle width="40" height="40" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="680" value="sutudyStack_Id : string" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;" vertex="1" parent="678">
+                <mxCell id="680" value="sutudyLog_Id : string" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;fontStyle=5;overflow=hidden;" vertex="1" parent="678">
                     <mxGeometry x="40" width="160.00000000000009" height="40" as="geometry">
                         <mxRectangle width="160.00000000000009" height="40" as="alternateBounds"/>
                     </mxGeometry>
@@ -1826,10 +1826,10 @@
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="727" value="" style="group" vertex="1" connectable="0" parent="1">
-                    <mxGeometry x="840" y="960" width="200" height="120" as="geometry"/>
+                    <mxGeometry x="840" y="1040" width="200" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="728" value="ユーザー情報_テックエリア" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" vertex="1" parent="727">
-                    <mxGeometry width="200.00000000000009" height="120" as="geometry">
+                <mxCell id="728" value="ユーザー情報_テックリーフ" style="shape=table;startSize=40;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" vertex="1" parent="727">
+                    <mxGeometry width="200.00000000000009" height="119.99999999999977" as="geometry">
                         <mxRectangle width="90" height="40" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
@@ -1854,7 +1854,7 @@
                         <mxRectangle width="40" height="40" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="734" value="techArea_id : string" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="732">
+                <mxCell id="734" value="techLeaf_id : string" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="732">
                     <mxGeometry x="40" width="160.00000000000009" height="40" as="geometry">
                         <mxRectangle width="160.00000000000009" height="40" as="alternateBounds"/>
                     </mxGeometry>
@@ -1864,10 +1864,22 @@
                         <mxRectangle width="40" height="40" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="736" value="" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="732">
+                <mxCell id="743" value="" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;" edge="1" parent="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
-                        <mxPoint x="1160" y="1020" as="sourcePoint"/>
-                        <mxPoint x="1120" y="1130" as="targetPoint"/>
+                        <mxPoint x="840" y="1380" as="sourcePoint"/>
+                        <mxPoint x="840" y="1100" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="800" y="1240"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="744" value="" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="21" target="732">
+                    <mxGeometry width="100" height="100" relative="1" as="geometry">
+                        <mxPoint x="1040" y="900" as="sourcePoint"/>
+                        <mxPoint x="1151" y="880" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="1080" y="1020"/>
+                        </Array>
                     </mxGeometry>
                 </mxCell>
             </root>
