@@ -1,5 +1,6 @@
 # コメントを追加したらサーバー再起動
 type Query {
+  getAllUser: [User!]
   user(id: String!): User!
   """
   全てのTechLeafを取得する
