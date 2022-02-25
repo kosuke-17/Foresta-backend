@@ -1,9 +1,12 @@
+# コメントを追加したらサーバー再起動
 type Query {
-  users: [User]!
   user(id: String!): User
 }
 
 type Mutation {
+  """
+  ユーザーを追加する(ユーザー名、エンジニアタイプ、GithubURL?)
+  """
   createUser(user: UserCreateInput!): User!
   updateUser(id: String!, user: UserUpdateInput!): User!
 }
