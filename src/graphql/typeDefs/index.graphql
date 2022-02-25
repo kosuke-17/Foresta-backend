@@ -1,0 +1,9 @@
+type Query {
+  users: [User]!
+  user(id: String!): User
+}
+
+type Mutation {
+  createUser(user: UserCreateInput!): User!
+  updateUser(id: String!, user: UserUpdateInput!): User!
+}

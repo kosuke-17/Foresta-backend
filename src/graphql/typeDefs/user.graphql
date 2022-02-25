@@ -1,0 +1,11 @@
+type User {
+  id: String
+  name: String
+}
+
+input UserCreateInput {
+  name: String
+}
+input UserUpdateInput {
+  name: String
+}
