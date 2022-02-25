@@ -1,11 +1,22 @@
 type User {
   id: String
   name: String
+  jobType: String
+  githubURL: String
+}
+
+type createdUser {
+  status: String!
+  node: User
 }
 
 input UserCreateInput {
   name: String
+  jobType: String
+  githubURL: String
 }
 input UserUpdateInput {
   name: String
+  jobType: String
+  githubURL: String
 }

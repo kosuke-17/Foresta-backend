@@ -5,8 +5,8 @@ type Query {
 
 type Mutation {
   """
-  ユーザーを追加する(ユーザー名、エンジニアタイプ、GithubURL?)
+  引数(ユーザー名、エンジニアタイプ、GithubURL?)
   """
-  createUser(user: UserCreateInput!): User!
+  createUser(user: UserCreateInput!): createdUser!
   updateUser(id: String!, user: UserUpdateInput!): User!
 }
