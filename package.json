@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc -p ."
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,20 @@
   "bugs": {
     "url": "https://github.com/kosuke-17/backend-ER-Schema/issues"
   },
-  "homepage": "https://github.com/kosuke-17/backend-ER-Schema#readme"
+  "homepage": "https://github.com/kosuke-17/backend-ER-Schema#readme",
+  "dependencies": {
+    "apollo-server-express": "^3.6.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "graphql": "^16.3.0",
+    "mongoose": "^6.2.3",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.5.0",
+    "typescript": "^4.5.5"
+  }
 }
