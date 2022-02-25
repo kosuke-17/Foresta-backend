@@ -1,3 +1,7 @@
+import dotenv from "dotenv";
+
+dotenv.config();
+
 const port = process.env.PORT || 4000;
 
 // プロジェクトの開発環境を判定
@@ -9,3 +13,5 @@ const env = {
 };
 
 export { port, env };
+
+export const MONGOURI = process.env.MONGO_URI || "";
