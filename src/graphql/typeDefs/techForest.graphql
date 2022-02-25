@@ -1,0 +1,21 @@
+type techLeaf {
+  id: String
+  name: String
+}
+type createdTechLeaf {
+  status: String!
+  node: techLeaf
+}
+input TechLeafCreateInput {
+  name: String
+}
+
+type techBranch {
+  name: String
+}
+type techTree {
+  name: String
+}
+type techArea {
+  name: String
+}

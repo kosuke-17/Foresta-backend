@@ -1,8 +1,7 @@
-import { User } from "../../../models/User.model";
+import { TechLeaf } from "../../../models/TechForest.model";
 import { success } from "../responseStatus";
-import { UserType } from "../types";
 
-const userMutations = {
+const techForestMutations = {
   /**
    * ユーザー追加.
    *
@@ -11,15 +10,15 @@ const userMutations = {
    * @returns - success : successステータス,作成したユーザー
    * @returns - error : errorステータス
    */
-  createUser: async (_parent: any, { user }: { user: UserType }) => {
-    // user_paramを分割代入
-    let { name, jobType, githubURL } = user;
-    if (githubURL == null) {
-      githubURL = "";
-    }
+  createTechLeaf: async (
+    _parent: any,
+    { techLeaf }: { techLeaf: { name: string } }
+  ) => {
+    const { name } = techLeaf;
+
     try {
-      const createUser = new User({ name, jobType, githubURL });
-      const result = await createUser.save();
+      const createTechLeaf = new TechLeaf({ name });
+      const result = await createTechLeaf.save();
       return success(result);
     } catch (e) {
       // 必須のデータがnullだとエラーを返す
@@ -28,4 +27,4 @@ const userMutations = {
   },
 };
 
-export default userMutations;
+export default techForestMutations;

@@ -1,12 +1,19 @@
 # コメントを追加したらサーバー再起動
 type Query {
-  user(id: String!): User
+  user(id: String!): User!
+  """
+  全てのTechLeafを取得する
+  """
+  getAllTechLeaf: [techLeaf!]!
 }
 
 type Mutation {
   """
-  引数(ユーザー名、エンジニアタイプ、GithubURL?)
+  ユーザーを追加する：引数(ユーザー名、エンジニアタイプ、GithubURL?)
   """
   createUser(user: UserCreateInput!): createdUser!
-  updateUser(id: String!, user: UserUpdateInput!): User!
+  """
+  TechLeafを追加する：引数(TechLeaf名)
+  """
+  createTechLeaf(techLeaf: TechLeafCreateInput!): createdTechLeaf!
 }
