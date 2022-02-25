@@ -4,3 +4,7 @@ export type UserType = {
   jobType: String;
   githubURL?: String;
 };
+
+export type TechLeafType = {
+  name: string;
+};
