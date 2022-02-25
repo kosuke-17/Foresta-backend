@@ -19,6 +19,7 @@ const UserSchema = new mongoose.Schema({
   githubURL: {
     type: String,
   },
+  userInfo_techLeaf: { type: Array },
 });
 
 export const User = mongoose.model("user", UserSchema);
