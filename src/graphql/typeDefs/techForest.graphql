@@ -18,9 +18,11 @@ type TechTree {
   techArea_id: String
   techBranches: [TechBranch!]
 }
+# id,nameは子リゾルバのtechTreeに渡る
 type TechArea {
   id: String
   name: String
+  techTrees: [TechTree!]
 }
 
 ################

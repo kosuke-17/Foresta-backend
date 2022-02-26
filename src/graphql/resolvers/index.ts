@@ -1,4 +1,4 @@
-import { TechBranch, TechLeaf } from "../../models/TechForest.model";
+import { TechBranch, TechLeaf, TechTree } from "../../models/TechForest.model";
 import { techForestMutations, techForestQueries } from "./techForest";
 import { userMutations, userQueries } from "./user";
 
@@ -12,26 +12,13 @@ const resolvers = {
     ...techForestMutations,
   },
   TechBranch: {
-    // TypeDefsのTechBranch(親リゾルバ)から受け取ったidを用いて
-    techLeafs: async ({ _id }: any) => {
-      const techLeaf = await TechLeaf.find({});
-      // からの配列が種出てきてしまう
-      // const techLeaf = await TechLeaf.find({
-      //   techBranch_id: _id,
-      // });
-      return techLeaf;
-    },
+    techLeafs: async ({ _id }: any) => await TechLeaf.find({}),
   },
   TechTree: {
-    // TypeDefsのTechTree(親リゾルバ)から受け取ったidを用いて
-    techBranches: async ({ _id }: any) => {
-      const techBranch = await TechBranch.find({});
-      // からの配列が種出てきてしまう
-      // const techLeaf = await TechLeaf.find({
-      //   techBranch_id: _id,
-      // });
-      return techBranch;
-    },
+    techBranches: async ({ _id }: any) => await TechBranch.find({}),
+  },
+  TechArea: {
+    techTrees: async ({ _id }: any) => await TechTree.find({}),
   },
 };
 
