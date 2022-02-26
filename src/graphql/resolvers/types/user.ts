@@ -5,3 +5,8 @@ export type UserType = {
   githubURL?: String;
   userInfo_techLeafs?: String[];
 };
+
+export type UserTechLeafsType = {
+  _id: String;
+  leafName: string;
+};

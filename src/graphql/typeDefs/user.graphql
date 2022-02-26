@@ -16,3 +16,13 @@ input UserCreateInput {
   jobType: String
   githubURL: String
 }
+
+type UpdateUserTechLeaf {
+  status: String!
+  node: TechLeaf
+}
+
+input UserTechLeafUpdateInput {
+  id: String
+  leafName: String
+}

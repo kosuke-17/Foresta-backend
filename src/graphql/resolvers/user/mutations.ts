@@ -1,6 +1,7 @@
 import { User } from "../../../models/User.model";
 import { success } from "../responseStatus";
 import { UserType } from "../types";
+import { UserTechLeafsType } from "../types/user";
 
 const userMutations = {
   /**
@@ -25,10 +26,15 @@ const userMutations = {
       return { status: "error" };
     }
   },
-  // updateUserTechLeafs: async (
-  //   _parent: any,
-  //   { user }: { user: UserType }
-  // ) => {},
+  updateUserTechLeafs: async (
+    _parent: any,
+    { user }: { user: UserTechLeafsType }
+  ) => {
+    const { _id, leafName } = user;
+
+    const UserById = User.findById({ _id });
+    return UserById;
+  },
 };
 
 export default userMutations;
