@@ -11,6 +11,8 @@ type Query {
   getAllTechLeaf: [TechLeaf!]!
   getAllTechBranch: [TechBranch!]!
   getAllTechTree: [TechTree!]!
+  getAllTechArea: [TechArea!]!
+  # getTechForest: [TechTree!]!
 }
 
 type Mutation {

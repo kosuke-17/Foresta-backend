@@ -4,10 +4,13 @@ type TechLeaf {
   techBranch_id: String
 }
 
+# id,name,techTree_idは子リゾルバのtechLeafsに渡る
+
 type TechBranch {
   id: String
   name: String
   techTree_id: String
+  techLeafs: [TechLeaf!]
 }
 
 type TechTree {

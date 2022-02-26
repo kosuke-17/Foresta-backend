@@ -1,4 +1,5 @@
 import {
+  TechArea,
   TechBranch,
   TechLeaf,
   TechTree,
@@ -6,29 +7,24 @@ import {
 
 const techForestQueries = {
   /**
-   * techLeaf一覧情報を取得する.
+   * それぞれtech一覧情報を取得する.
    *
    * @returns techLeaf一覧情報
-   */
-  getAllTechLeaf: async (_parent: any, _args: any) => {
-    return TechLeaf.find({});
-  },
-  /**
-   * techBranch一覧情報を取得する.
-   *
    * @returns techBranch一覧情報
-   */
-  getAllTechBranch: async (_parent: any, _args: any) => {
-    return TechBranch.find({});
-  },
-  /**
-   * techTree一覧情報を取得する.
-   *
    * @returns techTree一覧情報
+   * @returns techArea一覧情報
    */
-  getAllTechTree: async (_parent: any, _args: any) => {
-    return TechTree.find({});
-  },
+  getAllTechLeaf: async () => await TechLeaf.find({}),
+  getAllTechBranch: async () => await TechBranch.find({}),
+  getAllTechTree: async () => await TechTree.find({}),
+  getAllTechArea: async () => await TechArea.find({}),
+
+  // getTechForest: async () => {
+  //   const techTreeById = TechTree.find({
+  //     techTree_id: "6219afb4d55e2e236b9062b8",
+  //   });
+  //   return techTreeById;
+  // },
 };
 
 export default techForestQueries;
