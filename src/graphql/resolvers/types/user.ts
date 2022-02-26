@@ -8,5 +8,5 @@ export type UserType = {
 
 export type UserTechLeafsType = {
   _id: String;
-  leafName: string;
+  techLeafId: string;
 };

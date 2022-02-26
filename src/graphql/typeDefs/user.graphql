@@ -18,8 +18,8 @@ input UserCreateInput {
 
 # TechLeaf情報
 input UserTechLeafUpdateInput {
-  id: String
-  leafName: String
+  _id: String
+  techLeafId: String
 }
 
 ################

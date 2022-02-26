@@ -16,6 +16,9 @@ type Mutation {
   ユーザーを追加する：引数(ユーザー名、エンジニアタイプ、GithubURL?)
   """
   createUser(user: UserCreateInput!): CreatedUser!
+  """
+  TechLeafをユーザー情報に追加する：引数(ユーザーID, TechLeafID)
+  """
   updateUserTechLeafs(user: UserTechLeafUpdateInput!): User
   """
   TechLeafを追加する：引数(TechLeaf名)
