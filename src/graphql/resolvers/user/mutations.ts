@@ -25,10 +25,10 @@ const userMutations = {
       return { status: "error" };
     }
   },
-  updateUserInfoTechLeafs: async (
-    _parent: any,
-    { user }: { user: UserType }
-  ) => {},
+  // updateUserTechLeafs: async (
+  //   _parent: any,
+  //   { user }: { user: UserType }
+  // ) => {},
 };
 
 export default userMutations;
