@@ -1,5 +1,8 @@
 # コメントを追加したらサーバー再起動
 type Query {
+  """
+  全てのユーザー情報を取得する
+  """
   getAllUser: [User!]
   user(id: String!): User!
   """

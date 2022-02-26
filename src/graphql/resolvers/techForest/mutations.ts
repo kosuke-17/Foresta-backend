@@ -1,15 +1,14 @@
 import { TechLeaf } from "../../../models/TechForest.model";
 import { success } from "../responseStatus";
-import { TechLeafType } from "../types/user";
+import { TechLeafType } from "../types";
 
 const techForestMutations = {
   /**
    * techLeaf追加する.
    *
-   * @param _parent - 親リゾルバから受け取るオブジェクト
-   * @param args - 受け取ってきた引数
-   * @returns - success : successステータス,作成したtechLeafユーザー
-   * @returns - error : errorステータス
+   * @param techLeaf - techLeaf名
+   * @returns success : successステータス,作成したtechLeafユーザー
+   * @returns error : errorステータス
    */
   createTechLeaf: async (
     _parent: any,

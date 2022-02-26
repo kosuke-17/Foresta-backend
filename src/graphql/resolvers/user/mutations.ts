@@ -6,10 +6,9 @@ const userMutations = {
   /**
    * ユーザー追加.
    *
-   * @param _parent - 親リゾルバから受け取るオブジェクト
-   * @param args - 受け取ってきた引数
-   * @returns - success : successステータス,作成したユーザー
-   * @returns - error : errorステータス
+   * @param user - ユーザー情報
+   * @returns success : successステータス,作成したユーザー
+   * @returns error : errorステータス
    */
   createUser: async (_parent: any, { user }: { user: UserType }) => {
     // user_paramを分割代入
@@ -26,6 +25,10 @@ const userMutations = {
       return { status: "error" };
     }
   },
+  updateUserInfoTechLeafs: async (
+    _parent: any,
+    { user }: { user: UserType }
+  ) => {},
 };
 
 export default userMutations;
