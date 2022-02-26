@@ -5,18 +5,18 @@ type TechLeaf {
 }
 
 # id,name,techTree_idは子リゾルバのtechLeafsに渡る
-
 type TechBranch {
   id: String
   name: String
   techTree_id: String
   techLeafs: [TechLeaf!]
 }
-
+# id,name,techArea_idは子リゾルバのtechBranchesに渡る
 type TechTree {
   id: String
   name: String
   techArea_id: String
+  techBranches: [TechBranch!]
 }
 type TechArea {
   id: String
