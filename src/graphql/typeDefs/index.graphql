@@ -29,4 +29,5 @@ type Mutation {
   createTechLeaf(techLeaf: TechLeafCreateInput!): CreatedTechLeaf!
   createTechBranch(techBranch: TechBranchCreateInput!): CreatedTechBranch!
   createTechTree(techTree: TechTreeCreateInput!): CreatedTechTree!
+  createTechArea(techArea: TechAreaCreateInput!): CreatedTechArea!
 }

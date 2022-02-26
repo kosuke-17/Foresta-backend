@@ -1,11 +1,16 @@
 import {
+  TechArea,
   TechBranch,
   TechLeaf,
   TechTree,
 } from "../../../models/TechForest.model";
 import { success } from "../responseStatus";
 import { TechLeafType } from "../types";
-import { TechBranchType, TechTreeType } from "../types/techForest";
+import {
+  TechAreaType,
+  TechBranchType,
+  TechTreeType,
+} from "../types/techForest";
 
 const techForestMutations = {
   /**
@@ -68,6 +73,28 @@ const techForestMutations = {
     try {
       const createTechTree = new TechTree({ name });
       const result = await createTechTree.save();
+      return success(result);
+    } catch (e) {
+      // 必須のデータがnullだとエラーを返す
+      return { status: "error" };
+    }
+  },
+  /**
+   * TechArea追加する.
+   *
+   * @param techArea - techArea名
+   * @returns success : successステータス,作成したtechArea
+   * @returns error : errorステータス
+   */
+  createTechArea: async (
+    _parent: any,
+    { techArea }: { techArea: TechAreaType }
+  ) => {
+    const { name } = techArea;
+
+    try {
+      const createTechArea = new TechArea({ name });
+      const result = await createTechArea.save();
       return success(result);
     } catch (e) {
       // 必須のデータがnullだとエラーを返す

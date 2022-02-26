@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 /**
- *  TechLeafスキーマ
+ *  TechLeafスキーマ.
  *
  *  @remarks
  *  - TechLeaf名 : string
@@ -18,7 +18,8 @@ const TechLeafSchema = new mongoose.Schema({
 });
 
 /**
- *  TechBranchスキーマ
+ *  TechBranchスキーマ.
+ *
  *  @remarks
  *  - TechBranch名 : string
  *  - techTree_id(外部キー) : string
@@ -34,7 +35,8 @@ const TechBranchSchema = new mongoose.Schema({
 });
 
 /**
- *  TechTreeスキーマ
+ *  TechTreeスキーマ.
+ *
  *  @remarks
  *  - TechTree名 : string
  */
@@ -45,6 +47,20 @@ const TechTreeSchema = new mongoose.Schema({
   },
 });
 
+/**
+ *  TechAreaスキーマ.
+ *
+ *  @remarks
+ *  - TechArea名 : string
+ */
+const TechAreaSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+});
+
 export const TechLeaf = mongoose.model("techleaf", TechLeafSchema);
 export const TechBranch = mongoose.model("techbranch", TechBranchSchema);
 export const TechTree = mongoose.model("techtree", TechTreeSchema);
+export const TechArea = mongoose.model("techarea", TechAreaSchema);
