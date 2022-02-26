@@ -13,6 +13,9 @@ const TechLeafSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  techBranch_id: {
+    type: String,
+  },
 });
 
 export const TechLeaf = mongoose.model("techleaf", TechLeafSchema);
