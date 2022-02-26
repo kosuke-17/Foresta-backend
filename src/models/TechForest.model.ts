@@ -4,9 +4,8 @@ import mongoose from "mongoose";
  *  TechLeafスキーマ
  *
  *  @remarks
- *  - ユーザー名 : string
- *  - 職業タイプ : string
- *  - GithubURL : string
+ *  - TechLeaf名 : string
+ *  - techBranch_id(外部キー) : string
  */
 const TechLeafSchema = new mongoose.Schema({
   name: {
@@ -23,9 +22,7 @@ export const TechLeaf = mongoose.model("techleaf", TechLeafSchema);
 /**
  *  TechBranchスキーマ
  *  @remarks
- *  - ユーザー名 : string
- *  - 職業タイプ : string
- *  - GithubURL : string
+ *  - TechBranch : string
  */
 const TechBranchSchema = new mongoose.Schema({
   name: {
