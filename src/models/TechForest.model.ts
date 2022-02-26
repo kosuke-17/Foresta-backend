@@ -14,6 +14,7 @@ const TechLeafSchema = new mongoose.Schema({
   },
   techBranch_id: {
     type: String,
+    required: true,
   },
 });
 
@@ -31,6 +32,7 @@ const TechBranchSchema = new mongoose.Schema({
   },
   techTree_id: {
     type: String,
+    required: true,
   },
 });
 
@@ -42,6 +44,10 @@ const TechBranchSchema = new mongoose.Schema({
  */
 const TechTreeSchema = new mongoose.Schema({
   name: {
+    type: String,
+    required: true,
+  },
+  techArea_id: {
     type: String,
     required: true,
   },

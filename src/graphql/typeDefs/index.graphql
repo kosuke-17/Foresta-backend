@@ -6,10 +6,11 @@ type Query {
   getAllUser: [User!]
   user(id: String!): User!
   """
-  全てのTechLeafを取得する
+  それぞれのTechを取得する
   """
   getAllTechLeaf: [TechLeaf!]!
   getAllTechBranch: [TechBranch!]!
+  getAllTechTree: [TechTree!]!
 }
 
 type Mutation {

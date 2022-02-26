@@ -13,6 +13,7 @@ type TechBranch {
 type TechTree {
   id: String
   name: String
+  techArea_id: String
 }
 type TechArea {
   id: String
@@ -32,6 +33,7 @@ input TechBranchCreateInput {
 }
 input TechTreeCreateInput {
   name: String
+  techArea_id: String
 }
 input TechAreaCreateInput {
   name: String

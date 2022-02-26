@@ -8,6 +8,7 @@ export type TechBranchType = {
 };
 export type TechTreeType = {
   name: string;
+  techArea_id: string;
 };
 export type TechAreaType = {
   name: string;
