@@ -1,4 +1,4 @@
-import { TechLeaf } from "../../../models/TechForest.model";
+import { TechBranch, TechLeaf } from "../../../models/TechForest.model";
 
 const techForestQueries = {
   /**
@@ -8,6 +8,14 @@ const techForestQueries = {
    */
   getAllTechLeaf: async (_parent: any, _args: any) => {
     return TechLeaf.find({});
+  },
+  /**
+   * techBranch一覧情報を取得する.
+   *
+   * @returns techBranch一覧情報
+   */
+  getAllTechBranch: async (_parent: any, _args: any) => {
+    return TechBranch.find({});
   },
 };
 

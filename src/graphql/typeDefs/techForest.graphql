@@ -7,6 +7,7 @@ type TechLeaf {
 type TechBranch {
   id: String
   name: String
+  techTree_id: String
 }
 
 type TechTree {
@@ -45,8 +46,3 @@ type CreatedTechTree {
   node: TechTree
 }
 ################################
-
-type TechArea {
-  id: String
-  name: String
-}

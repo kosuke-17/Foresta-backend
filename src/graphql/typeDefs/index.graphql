@@ -9,6 +9,7 @@ type Query {
   全てのTechLeafを取得する
   """
   getAllTechLeaf: [TechLeaf!]!
+  getAllTechBranch: [TechBranch!]!
 }
 
 type Mutation {

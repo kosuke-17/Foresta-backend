@@ -1,2 +1,2 @@
 export { UserType } from "./user";
-export { TechLeafType } from "./techForest";
+export { TechLeafType, TechBranchType, TechTreeType } from "./techForest";
