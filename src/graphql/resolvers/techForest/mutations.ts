@@ -1,11 +1,15 @@
-import { TechBranch, TechLeaf } from "../../../models/TechForest.model";
+import {
+  TechBranch,
+  TechLeaf,
+  TechTree,
+} from "../../../models/TechForest.model";
 import { success } from "../responseStatus";
 import { TechLeafType } from "../types";
-import { TechBranchType } from "../types/techForest";
+import { TechBranchType, TechTreeType } from "../types/techForest";
 
 const techForestMutations = {
   /**
-   * techLeaf追加する.
+   * TechLeaf追加する.
    *
    * @param techLeaf - techLeaf名
    * @returns success : successステータス,作成したtechLeaf
@@ -27,7 +31,7 @@ const techForestMutations = {
     }
   },
   /**
-   * techBranch追加する.
+   * TechBranch追加する.
    *
    * @param techBranch - techBranch名
    * @returns success : successステータス,作成したtechBranch
@@ -40,8 +44,30 @@ const techForestMutations = {
     const { name } = techBranch;
 
     try {
-      const createTechLeaf = new TechBranch({ name });
-      const result = await createTechLeaf.save();
+      const createTechBranch = new TechBranch({ name });
+      const result = await createTechBranch.save();
+      return success(result);
+    } catch (e) {
+      // 必須のデータがnullだとエラーを返す
+      return { status: "error" };
+    }
+  },
+  /**
+   * TechTree追加する.
+   *
+   * @param techTree - techTree名
+   * @returns success : successステータス,作成したtechTree
+   * @returns error : errorステータス
+   */
+  createTechTree: async (
+    _parent: any,
+    { techTree }: { techTree: TechTreeType }
+  ) => {
+    const { name } = techTree;
+
+    try {
+      const createTechTree = new TechTree({ name });
+      const result = await createTechTree.save();
       return success(result);
     } catch (e) {
       // 必須のデータがnullだとエラーを返す

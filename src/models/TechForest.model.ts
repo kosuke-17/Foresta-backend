@@ -22,7 +22,7 @@ export const TechLeaf = mongoose.model("techleaf", TechLeafSchema);
 /**
  *  TechBranchスキーマ
  *  @remarks
- *  - TechBranch : string
+ *  - TechBranch名 : string
  */
 const TechBranchSchema = new mongoose.Schema({
   name: {
@@ -32,3 +32,17 @@ const TechBranchSchema = new mongoose.Schema({
 });
 
 export const TechBranch = mongoose.model("techbranch", TechBranchSchema);
+
+/**
+ *  TechTreeスキーマ
+ *  @remarks
+ *  - TechTree名 : string
+ */
+const TechTreeSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+});
+
+export const TechTree = mongoose.model("techtree", TechTreeSchema);

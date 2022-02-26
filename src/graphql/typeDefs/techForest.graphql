@@ -9,6 +9,11 @@ type TechBranch {
   name: String
 }
 
+type TechTree {
+  id: String
+  name: String
+}
+
 ################
 #リクエストボディ
 
@@ -17,6 +22,9 @@ input TechLeafCreateInput {
   techBranch_id: String
 }
 input TechBranchCreateInput {
+  name: String
+}
+input TechTreeCreateInput {
   name: String
 }
 ################
@@ -32,12 +40,12 @@ type CreatedTechBranch {
   status: String!
   node: TechBranch
 }
+type CreatedTechTree {
+  status: String!
+  node: TechTree
+}
 ################################
 
-type TechTree {
-  id: String
-  name: String
-}
 type TechArea {
   id: String
   name: String

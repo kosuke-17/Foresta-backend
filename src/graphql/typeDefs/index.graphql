@@ -23,11 +23,9 @@ type Mutation {
   updateUserTechLeafs(user: UserTechLeafUpdateInput!): User
 
   """
-  TechLeafを追加する：引数(TechLeaf名)
+  Techを追加する：引数(Leaf名 or Branch名 or Tree名)
   """
   createTechLeaf(techLeaf: TechLeafCreateInput!): CreatedTechLeaf!
-  """
-  TechBranchを追加する：引数(TechBranch名)
-  """
   createTechBranch(techBranch: TechBranchCreateInput!): CreatedTechBranch!
+  createTechTree(techTree: TechTreeCreateInput!): CreatedTechTree!
 }
