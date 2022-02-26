@@ -3,7 +3,7 @@ type User {
   name: String
   jobType: String
   githubURL: String
-  userInfo_techLeaf: [ID]
+  userInfo_techLeafs: [ID]
 }
 
 type createdUser {
