@@ -1,8 +1,8 @@
-type techLeaf {
+type TechLeaf {
   id: String
   name: String
 }
-type createdTechLeaf {
+type CreatedTechLeaf {
   status: String!
   node: techLeaf
 }
@@ -10,12 +10,16 @@ input TechLeafCreateInput {
   name: String
 }
 
-type techBranch {
+###################################
+type TechBranch {
+  id: String
   name: String
 }
-type techTree {
+type TechTree {
+  id: String
   name: String
 }
-type techArea {
+type TechArea {
+  id: String
   name: String
 }

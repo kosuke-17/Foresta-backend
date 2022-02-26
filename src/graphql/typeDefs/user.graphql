@@ -6,7 +6,7 @@ type User {
   userInfo_techLeafs: [ID]
 }
 
-type createdUser {
+type CreatedUser {
   status: String!
   node: User
 }

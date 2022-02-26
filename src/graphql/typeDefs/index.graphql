@@ -8,16 +8,16 @@ type Query {
   """
   全てのTechLeafを取得する
   """
-  getAllTechLeaf: [techLeaf!]!
+  getAllTechLeaf: [TechLeaf!]!
 }
 
 type Mutation {
   """
   ユーザーを追加する：引数(ユーザー名、エンジニアタイプ、GithubURL?)
   """
-  createUser(user: UserCreateInput!): createdUser!
+  createUser(user: UserCreateInput!): CreatedUser!
   """
   TechLeafを追加する：引数(TechLeaf名)
   """
-  createTechLeaf(techLeaf: TechLeafCreateInput!): createdTechLeaf!
+  createTechLeaf(techLeaf: TechLeafCreateInput!): CreatedTechLeaf!
 }
