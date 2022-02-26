@@ -1,3 +1,4 @@
+# ユーザー情報
 type User {
   id: String
   name: String
@@ -5,24 +6,34 @@ type User {
   githubURL: String
   userInfo_techLeafs: [ID]
 }
+################
+#リクエストボディ
 
-type CreatedUser {
-  status: String!
-  node: User
-}
-
+# ユーザー情報
 input UserCreateInput {
   name: String
   jobType: String
   githubURL: String
 }
 
-type UpdateUserTechLeaf {
-  status: String!
-  node: TechLeaf
-}
-
+# TechLeaf情報
 input UserTechLeafUpdateInput {
   id: String
   leafName: String
+}
+
+################
+
+################################
+#レスポンス
+# ユーザー情報
+type CreatedUser {
+  status: String!
+  node: User
+}
+
+# TechLeaf情報
+type UpdatedUserTechLeaf {
+  status: String!
+  node: TechLeaf
 }

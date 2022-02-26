@@ -2,15 +2,24 @@ type TechLeaf {
   id: String
   name: String
 }
+
+################
+#リクエストボディ
+
+input TechLeafCreateInput {
+  name: String
+}
+################
+
+################
+#レスポンス
+
 type CreatedTechLeaf {
   status: String!
   node: TechLeaf
 }
-input TechLeafCreateInput {
-  name: String
-}
+################################
 
-###################################
 type TechBranch {
   id: String
   name: String
