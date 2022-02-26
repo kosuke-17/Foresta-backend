@@ -1,6 +1,7 @@
 type TechLeaf {
   id: String
   name: String
+  techBranch_id: String
 }
 
 type TechBranch {
@@ -13,6 +14,7 @@ type TechBranch {
 
 input TechLeafCreateInput {
   name: String
+  techBranch_id: String
 }
 input TechBranchCreateInput {
   name: String
