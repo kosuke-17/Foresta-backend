@@ -18,13 +18,6 @@ const techForestQueries = {
   getAllTechBranch: async () => await TechBranch.find({}),
   getAllTechTree: async () => await TechTree.find({}),
   getAllTechArea: async () => await TechArea.find({}),
-
-  // getTechForest: async () => {
-  //   const techTreeById = TechTree.find({
-  //     techTree_id: "6219afb4d55e2e236b9062b8",
-  //   });
-  //   return techTreeById;
-  // },
 };
 
 export default techForestQueries;

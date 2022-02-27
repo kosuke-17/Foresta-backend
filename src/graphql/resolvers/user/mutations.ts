@@ -33,16 +33,14 @@ const userMutations = {
     const { _id, techLeafId } = user;
 
     // 追加更新したい
-    // console.log("更新");
-    const result = User.updateMany(
+    const result = User.findByIdAndUpdate(
       { _id: _id },
       {
-        $push: { userInfo_techLeafs: "6218cb1b5a704eaaf78a18e9" },
+        $addToSet: { userInfo_techLeafs: techLeafId },
       }
     );
-    const UserById = User.findById({ _id });
 
-    return UserById;
+    return result;
   },
 };
 

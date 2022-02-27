@@ -4,7 +4,7 @@ type User {
   name: String
   jobType: String
   githubURL: String
-  userInfo_techLeafs: [ID]
+  userInfo_techLeafs: [String]
 }
 ################
 #リクエストボディ
