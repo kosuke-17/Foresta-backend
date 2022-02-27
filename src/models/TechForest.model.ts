@@ -41,6 +41,7 @@ const TechBranchSchema = new mongoose.Schema({
  *
  *  @remarks
  *  - TechTree名 : string
+ *  - techArea_id(外部キー) : string
  */
 const TechTreeSchema = new mongoose.Schema({
   name: {
