@@ -13,12 +13,18 @@ const userMutations = {
    */
   createUser: async (_parent: any, { user }: { user: UserType }) => {
     // user_paramを分割代入
-    let { name, jobType, githubURL } = user;
+    let { name, jobType, email, password, githubURL } = user;
     if (githubURL == null) {
       githubURL = "";
     }
     try {
-      const createUser = new User({ name, jobType, githubURL });
+      const createUser = new User({
+        name,
+        jobType,
+        email,
+        password,
+        githubURL,
+      });
       const result = await createUser.save();
       return success(result);
     } catch (e) {

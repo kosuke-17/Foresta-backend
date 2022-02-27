@@ -3,6 +3,8 @@ type User {
   id: String
   name: String
   jobType: String
+  email: String
+  password: String
   githubURL: String
   have_techLeafs: [String]
 }
@@ -13,6 +15,8 @@ type User {
 input UserCreateInput {
   name: String
   jobType: String
+  email: String
+  password: String
   githubURL: String
 }
 

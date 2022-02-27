@@ -6,6 +6,7 @@ import mongoose from "mongoose";
  *  - ユーザー名 : string
  *  - 職業タイプ : string
  *  - GithubURL : string
+ *  - techLeaf習得技術 : string[]]
  */
 const UserSchema = new mongoose.Schema({
   name: {
@@ -13,6 +14,14 @@ const UserSchema = new mongoose.Schema({
     required: true,
   },
   jobType: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  password: {
     type: String,
     required: true,
   },
