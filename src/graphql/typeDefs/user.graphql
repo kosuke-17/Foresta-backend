@@ -8,6 +8,11 @@ type User {
   githubURL: String
   have_techLeafs: [String]
 }
+type URL {
+  uerId: String
+  urlName: String
+  url: String
+}
 ################
 #リクエストボディ
 
@@ -20,10 +25,18 @@ input UserCreateInput {
   githubURL: String!
 }
 
+# ログインユーザー情報
 input UserLoginInput {
   _id: String!
   email: String!
   password: String!
+}
+
+# ユーザーに紐づくurl情報
+input UserUrlsCreateInput {
+  userId: String
+  urlName: String
+  url: String
 }
 
 # TechLeaf情報
@@ -44,4 +57,9 @@ input UserTechLeafRemoveInput {
 type ResponseUser {
   status: String!
   node: User!
+}
+
+type ResponseUserUrls {
+  status: String!
+  node: URL
 }

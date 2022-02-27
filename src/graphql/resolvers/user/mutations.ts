@@ -1,4 +1,4 @@
-import { User } from "../../../models/User.model";
+import { User, UserUrls } from "../../../models/User.model";
 import { success } from "../responseStatus";
 import { UserType, UserTechLeafsType, UserLoginType } from "../types";
 
@@ -50,6 +50,27 @@ const userMutations = {
       return success(result);
     } catch (error) {
       // 必須のデータがnullだとエラーを返す
+      return { status: "error" };
+    }
+  },
+
+  createUserUrls: async (_parent: any, { user }: any) => {
+    const { urlName, url, uerId } = user;
+
+    try {
+      const createUserUrls = new UserUrls({
+        user_urls: [
+          {
+            uerId: uerId,
+            urlName: urlName,
+            url: url,
+          },
+        ],
+      });
+
+      const result = await createUserUrls.save();
+      return success(result);
+    } catch (error) {
       return { status: "error" };
     }
   },

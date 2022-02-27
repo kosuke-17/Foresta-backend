@@ -32,6 +32,11 @@ type Mutation {
   """
   removeUserTechLeafs(user: UserTechLeafRemoveInput!): ResponseUser!
   """
+  ユーザーの持つUrlを作成する：引数(ユーザーID, TechLeafID)
+  """
+  createUserUrls(user: UserUrlsCreateInput!): ResponseUserUrls!
+
+  """
   ユーザーがログインする：引数(ユーザーID, email, password)
   """
   userLogin(user: UserLoginInput!): ResponseUser!
