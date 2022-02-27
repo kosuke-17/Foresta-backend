@@ -1,5 +1,4 @@
 export type UserType = {
-  id: String;
   name: String;
   jobType: String;
   email: String;
@@ -11,4 +10,10 @@ export type UserType = {
 export type UserTechLeafsType = {
   _id: String;
   techLeafId: string;
+};
+
+export type UserLoginType = {
+  _id: String;
+  email: String;
+  password: String;
 };

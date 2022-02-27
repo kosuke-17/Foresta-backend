@@ -13,27 +13,27 @@ type User {
 
 # ユーザー情報
 input UserCreateInput {
-  name: String
-  jobType: String
-  email: String
-  password: String
-  githubURL: String
+  name: String!
+  jobType: String!
+  email: String!
+  password: String!
+  githubURL: String!
 }
 
 input UserLoginInput {
-  _id: String
-  email: String
-  password: String
+  _id: String!
+  email: String!
+  password: String!
 }
 
 # TechLeaf情報
 input UserTechLeafAddInput {
-  _id: String
-  techLeafId: String
+  _id: String!
+  techLeafId: String!
 }
 input UserTechLeafRemoveInput {
-  _id: String
-  techLeafId: String
+  _id: String!
+  techLeafId: String!
 }
 
 ################
@@ -43,5 +43,5 @@ input UserTechLeafRemoveInput {
 # ユーザー情報
 type ResponseUser {
   status: String!
-  node: User
+  node: User!
 }

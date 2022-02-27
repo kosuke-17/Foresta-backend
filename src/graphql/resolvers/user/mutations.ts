@@ -1,13 +1,12 @@
 import { User } from "../../../models/User.model";
 import { success } from "../responseStatus";
-import { UserType } from "../types";
-import { UserTechLeafsType } from "../types/user";
+import { UserType, UserTechLeafsType, UserLoginType } from "../types";
 
 const userMutations = {
   /**
    * ユーザー追加.
    *
-   * @param user - ユーザー情報
+   * @param user - 名、職種、email、パスワード、GithubURL
    * @returns success : successステータス,作成したユーザー
    * @returns error : errorステータス
    */
@@ -28,6 +27,28 @@ const userMutations = {
       const result = await createUser.save();
       return success(result);
     } catch (e) {
+      // 必須のデータがnullだとエラーを返す
+      return { status: "error" };
+    }
+  },
+  /**
+   * ログインする処理.
+   *
+   * @param user - ユーザーID, email, パスワード
+   * @returns success : successステータス,当てはまったユーザー
+   * @returns error : errorステータス
+   */
+  userLogin: async (_parent: any, { user }: { user: UserLoginType }) => {
+    const { _id, email, password } = user;
+    try {
+      const result = await User.findOne({
+        _id: _id,
+        email: email,
+        password: password,
+      });
+
+      return success(result);
+    } catch (error) {
       // 必須のデータがnullだとエラーを返す
       return { status: "error" };
     }

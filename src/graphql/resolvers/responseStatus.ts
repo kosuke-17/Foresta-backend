@@ -1,4 +1,3 @@
-import { UserType } from "./types";
 // レスポンスで返すステータス
 export enum QueryStatus {
   success = "success",
@@ -11,8 +10,7 @@ export enum QueryStatus {
  * @returns - successの文字列
  * @returns - nodeData
  */
-type nodeType = UserType;
-export const success = (node: nodeType) => ({
+export const success = (node: any) => ({
   status: QueryStatus.success,
   node,
 });
