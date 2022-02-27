@@ -11,7 +11,7 @@ export enum QueryStatus {
  * @returns - successの文字列
  * @returns - nodeData
  */
-type nodeType = UserType
+type nodeType = UserType;
 export const success = (node: nodeType) => ({
   status: QueryStatus.success,
   node,

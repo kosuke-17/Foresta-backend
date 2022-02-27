@@ -26,21 +26,30 @@ const userMutations = {
       return { status: "error" };
     }
   },
-  updateUserTechLeafs: async (
+
+  /**
+   * 習得技術追加.
+   *
+   * @param user - ユーザー情報
+   * @returns success : successステータス,技術を習得したユーザー
+   */
+  addUserTechLeafs: async (
     _parent: any,
     { user }: { user: UserTechLeafsType }
   ) => {
     const { _id, techLeafId } = user;
-
-    // 追加更新したい
-    const result = User.findByIdAndUpdate(
-      { _id: _id },
-      {
-        $addToSet: { have_techLeafs: techLeafId },
-      }
-    );
-
-    return result;
+    try {
+      const result = await User.findByIdAndUpdate(
+        { _id: _id },
+        {
+          $addToSet: { have_techLeafs: techLeafId },
+        }
+      );
+      return success(result);
+    } catch (e) {
+      // 必須のデータがnullだとエラーを返す
+      return { status: "error" };
+    }
   },
 };
 

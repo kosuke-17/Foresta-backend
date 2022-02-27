@@ -17,7 +17,7 @@ input UserCreateInput {
 }
 
 # TechLeaf情報
-input UserTechLeafUpdateInput {
+input UserTechLeafAddInput {
   _id: String
   techLeafId: String
 }
@@ -31,9 +31,7 @@ type CreatedUser {
   status: String!
   node: User
 }
-
-# TechLeaf情報
-type UpdatedUserTechLeaf {
+type AddedTechLeafUser {
   status: String!
-  node: TechLeaf
+  node: User
 }

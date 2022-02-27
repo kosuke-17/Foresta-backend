@@ -4,6 +4,9 @@ type Query {
   全てのユーザー情報を取得する
   """
   getAllUser: [User!]
+  """
+  _idに紐づくユーザー情報を取得する
+  """
   user(_id: String!): User!
   """
   それぞれのTechを取得する
@@ -23,7 +26,7 @@ type Mutation {
   """
   TechLeafをユーザー情報に追加する：引数(ユーザーID, TechLeafID)
   """
-  updateUserTechLeafs(user: UserTechLeafUpdateInput!): User
+  addUserTechLeafs(user: UserTechLeafAddInput!): AddedTechLeafUser!
 
   """
   Techを追加する：引数(Leaf名 or Branch名 or Tree名)
