@@ -20,6 +20,12 @@ input UserCreateInput {
   githubURL: String
 }
 
+input UserLoginInput {
+  _id: String
+  email: String
+  password: String
+}
+
 # TechLeaf情報
 input UserTechLeafAddInput {
   _id: String

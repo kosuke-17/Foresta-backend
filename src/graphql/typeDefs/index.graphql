@@ -27,7 +27,14 @@ type Mutation {
   TechLeafをユーザー情報に追加する：引数(ユーザーID, TechLeafID)
   """
   addUserTechLeafs(user: UserTechLeafAddInput!): ResponseUser!
+  """
+  ユーザーの持つTechLeaf削除する：引数(ユーザーID, TechLeafID)
+  """
   removeUserTechLeafs(user: UserTechLeafRemoveInput!): ResponseUser!
+  """
+  ユーザーがログインする：引数(ユーザーID, email, password)
+  """
+  userLogin(user: UserLoginInput!): ResponseUser!
 
   """
   Techを追加する：引数(Leaf名 or Branch名 or Tree名)
