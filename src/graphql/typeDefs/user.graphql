@@ -9,9 +9,12 @@ type User {
   have_techLeafs: [String]
 }
 type URL {
-  uerId: String
+  userId: String
   urlName: String
   url: String
+}
+type UserUrls {
+  user_urls: [URL]
 }
 ################
 #リクエストボディ
@@ -60,6 +63,6 @@ type ResponseUser {
 }
 
 type ResponseUserUrls {
-  status: String!
-  node: URL
+  status: String
+  node: UserUrls
 }

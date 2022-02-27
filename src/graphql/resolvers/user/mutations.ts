@@ -54,14 +54,19 @@ const userMutations = {
     }
   },
 
+  /**
+   *
+   * @param user - ユーザー情報
+   * @returns success : successステータス,作成したURL
+   */
   createUserUrls: async (_parent: any, { user }: any) => {
-    const { urlName, url, uerId } = user;
+    const { urlName, url, userId } = user;
 
     try {
       const createUserUrls = new UserUrls({
         user_urls: [
           {
-            uerId: uerId,
+            userId: userId,
             urlName: urlName,
             url: url,
           },
