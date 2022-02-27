@@ -9,10 +9,8 @@ const userQueries = {
   getAllUser: async (_parent: any, _args: any) => {
     return User.find({});
   },
-  user: async (_parent: any, { id }: any) => {
-    const objId = id;
-
-    return User.findById({ objId });
+  user: async (_parent: any, { _id }: any) => {
+    return User.findById({ _id });
   },
 };
 

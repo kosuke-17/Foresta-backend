@@ -4,7 +4,7 @@ type Query {
   全てのユーザー情報を取得する
   """
   getAllUser: [User!]
-  user(id: String!): User!
+  user(_id: String!): User!
   """
   それぞれのTechを取得する
   """

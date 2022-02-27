@@ -36,7 +36,7 @@ const userMutations = {
     const result = User.findByIdAndUpdate(
       { _id: _id },
       {
-        $addToSet: { userInfo_techLeafs: techLeafId },
+        $addToSet: { have_techLeafs: techLeafId },
       }
     );
 

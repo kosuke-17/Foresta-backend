@@ -3,7 +3,7 @@ export type UserType = {
   name: String;
   jobType: String;
   githubURL?: String;
-  userInfo_techLeafs?: String[];
+  have_techLeafs?: String[];
 };
 
 export type UserTechLeafsType = {
