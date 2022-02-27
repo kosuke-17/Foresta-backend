@@ -21,17 +21,17 @@ input UserTechLeafAddInput {
   _id: String
   techLeafId: String
 }
+input UserTechLeafRemoveInput {
+  _id: String
+  techLeafId: String
+}
 
 ################
 
 ################################
 #レスポンス
 # ユーザー情報
-type CreatedUser {
-  status: String!
-  node: User
-}
-type AddedTechLeafUser {
+type ResponseUser {
   status: String!
   node: User
 }

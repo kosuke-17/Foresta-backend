@@ -51,6 +51,30 @@ const userMutations = {
       return { status: "error" };
     }
   },
+  /**
+   * 習得技術削除.
+   *
+   * @param user - ユーザー情報
+   * @returns success : successステータス,習得技術を削除したユーザー
+   */
+  removeUserTechLeafs: async (
+    _parent: any,
+    { user }: { user: UserTechLeafsType }
+  ) => {
+    const { _id, techLeafId } = user;
+    try {
+      const result = await User.findByIdAndUpdate(
+        { _id: _id },
+        {
+          $pull: { have_techLeafs: techLeafId },
+        }
+      );
+      return success(result);
+    } catch (e) {
+      // 必須のデータがnullだとエラーを返す
+      return { status: "error" };
+    }
+  },
 };
 
 export default userMutations;
