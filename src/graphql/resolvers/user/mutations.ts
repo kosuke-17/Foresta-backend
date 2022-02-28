@@ -55,9 +55,10 @@ const userMutations = {
   },
 
   /**
+   * ユーザーのurl情報を作成する
    *
    * @param user - ユーザー情報
-   * @returns success : successステータス,作成したURL
+   * @returns success : successステータス,作成したURL情報
    */
   createUserUrls: async (_parent: any, { user }: any) => {
     const { urlName, url, userId } = user;
@@ -66,11 +67,11 @@ const userMutations = {
       const createUserUrls = new UserUrls({
         user_urls: [
           {
-            userId: userId,
             urlName: urlName,
             url: url,
           },
         ],
+        userId: userId,
       });
 
       const result = await createUserUrls.save();
@@ -78,6 +79,24 @@ const userMutations = {
     } catch (error) {
       return { status: "error" };
     }
+  },
+  /**
+   * ユーザーのurl情報を追加する
+   *
+   * @param user - ユーザー情報
+   * @returns success : successステータス,追加したURL情報
+   */
+  addUserUrls: async (_parent: any, { user }: any) => {
+    // const { urlName, url, userId } = user;
+    // try {
+    //   const result = await UserUrls.findByIdAndUpdate(
+    //     { _id: userId },
+    //     { $addToSet: {} }
+    //   );
+    //   return success(result);
+    // } catch (error) {
+    //   return { status: "error" };
+    // }
   },
 
   /**

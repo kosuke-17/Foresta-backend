@@ -43,11 +43,11 @@ export const User = mongoose.model("user", UserSchema);
 const UserUrlsSchema = new mongoose.Schema({
   user_urls: [
     {
-      userId: { type: String },
       urlName: { type: String },
       url: { type: String },
     },
   ],
+  userId: { type: String },
 });
 
 export const UserUrls = mongoose.model("userurls", UserUrlsSchema);

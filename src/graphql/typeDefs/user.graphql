@@ -9,12 +9,12 @@ type User {
   have_techLeafs: [String]
 }
 type URL {
-  userId: String
   urlName: String
   url: String
 }
 type UserUrls {
   user_urls: [URL]
+  userId: String
 }
 ################
 #リクエストボディ
@@ -36,7 +36,7 @@ input UserLoginInput {
 }
 
 # ユーザーに紐づくurl情報
-input UserUrlsCreateInput {
+input UserUrlsInput {
   userId: String
   urlName: String
   url: String
