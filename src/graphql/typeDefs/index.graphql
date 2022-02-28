@@ -36,6 +36,7 @@ type Mutation {
   """
   createUserUrls(user: UserUrlsInput!): ResponseUserUrls!
   addUserUrls(user: UserUrlsInput!): ResponseUserUrls!
+  # removeUserUrls(user: UserUrlsRemoveInput!): ResponseUserUrls!
 
   """
   ユーザーがログインする：引数(ユーザーID, email, password)

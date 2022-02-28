@@ -1,3 +1,4 @@
+import { v4 as uuid } from "uuid";
 import { User, UserUrls } from "../../../models/User.model";
 import { success } from "../responseStatus";
 import { UserType, UserTechLeafsType, UserLoginType } from "../types";
@@ -55,7 +56,7 @@ const userMutations = {
   },
 
   /**
-   * ユーザーのurl情報を作成する
+   * ユーザーのurl情報を作成.
    *
    * @param user - ユーザー情報
    * @returns success : successステータス,作成したURL情報
@@ -81,14 +82,14 @@ const userMutations = {
     }
   },
   /**
-   * ユーザーのurl情報を追加する
+   * ユーザーのurl情報を追加.
    *
    * @param user - ユーザー情報
    * @returns success : successステータス,追加したURL情報
    */
   addUserUrls: async (_parent: any, { user }: any) => {
     const { urlName, url, userId } = user;
-    const user_urls_obj = { urlName: urlName, url: url };
+    const user_urls_obj = { uid: uuid(), urlName: urlName, url: url };
     try {
       const result = await UserUrls.findOneAndUpdate(
         { userId: userId },
@@ -99,6 +100,30 @@ const userMutations = {
       return { status: "error" };
     }
   },
+  /**
+   * ユーザーのurl情報を削除.
+   *
+   * @param user - ユーザー情報
+   * @returns success : successステータス,追加したURL情報
+   */
+  // removeUserUrls: async (_parent: any, { user }: any) => {
+  //   const { uId, userId, urlId } = user;
+  //   console.log("uId : " + uId);
+  //   // console.log("urlId : " + urlId);
+  //   console.log("userId : " + userId);
+
+  //   try {
+  //     const result = await UserUrls.findOneAndUpdate(
+  //       {
+  //         userId: userId,
+  //       },
+  //       { $pull: { user_urls: { $elemMatch: { uid: uId } } } }
+  //     );
+  //     return success(result);
+  //   } catch (error) {
+  //     return { status: "error" };
+  //   }
+  // },
 
   /**
    * 習得技術追加.

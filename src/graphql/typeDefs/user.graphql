@@ -41,6 +41,11 @@ input UserUrlsInput {
   urlName: String
   url: String
 }
+input UserUrlsRemoveInput {
+  uId: String
+  userId: String
+  urlId: String
+}
 
 # TechLeaf情報
 input UserTechLeafAddInput {

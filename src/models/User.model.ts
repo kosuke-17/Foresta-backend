@@ -43,6 +43,7 @@ export const User = mongoose.model("user", UserSchema);
 const UserUrlsSchema = new mongoose.Schema({
   user_urls: [
     {
+      uid: { type: String },
       urlName: { type: String },
       url: { type: String },
     },
