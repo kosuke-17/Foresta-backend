@@ -229,8 +229,7 @@ const userMutations = {
    * @returns error : errorステータス
    */
   updateTodo: async (_parent: any, { todo }: any) => {
-    const { id, title, description, startedAt, finishedAt, isStatus, userId } =
-      todo;
+    const { id, title, description, startedAt, finishedAt, isStatus } = todo;
     try {
       const result = await UserTodo.findByIdAndUpdate(
         { _id: id },
@@ -243,6 +242,24 @@ const userMutations = {
             isStatus: isStatus,
           },
         }
+      );
+      return success(result);
+    } catch (error) {
+      // 必須のデータがnullだとエラーを返す
+      return { status: "error" };
+    }
+  },
+  /**
+   *
+   * @param todoId - todoID
+   * @returns success : successステータス,更新したtodo情報
+   * @returns error : errorステータス
+   */
+  chekedTodoStatus: async (_parent: any, { todoId }: any) => {
+    try {
+      const result = await UserTodo.findByIdAndUpdate(
+        { _id: todoId },
+        { $set: { isStatus: true } }
       );
       return success(result);
     } catch (error) {
