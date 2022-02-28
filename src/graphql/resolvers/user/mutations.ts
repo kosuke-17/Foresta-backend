@@ -87,16 +87,17 @@ const userMutations = {
    * @returns success : successステータス,追加したURL情報
    */
   addUserUrls: async (_parent: any, { user }: any) => {
-    // const { urlName, url, userId } = user;
-    // try {
-    //   const result = await UserUrls.findByIdAndUpdate(
-    //     { _id: userId },
-    //     { $addToSet: {} }
-    //   );
-    //   return success(result);
-    // } catch (error) {
-    //   return { status: "error" };
-    // }
+    const { urlName, url, userId } = user;
+    const user_urls_obj = { urlName: urlName, url: url };
+    try {
+      const result = await UserUrls.findOneAndUpdate(
+        { userId: userId },
+        { $addToSet: { user_urls: user_urls_obj } }
+      );
+      return success(result);
+    } catch (error) {
+      return { status: "error" };
+    }
   },
 
   /**

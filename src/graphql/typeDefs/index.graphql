@@ -34,7 +34,8 @@ type Mutation {
   """
   ユーザーの持つUrlを作成する：引数(ユーザーID, TechLeafID)
   """
-  createUserUrls(user: UserUrlsCreateInput!): ResponseUserUrls!
+  createUserUrls(user: UserUrlsInput!): ResponseUserUrls!
+  addUserUrls(user: UserUrlsInput!): ResponseUserUrls!
 
   """
   ユーザーがログインする：引数(ユーザーID, email, password)
