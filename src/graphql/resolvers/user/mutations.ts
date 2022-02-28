@@ -250,6 +250,7 @@ const userMutations = {
     }
   },
   /**
+   * todoの状態をtrueにする
    *
    * @param todoId - todoID
    * @returns success : successステータス,更新したtodo情報
@@ -260,6 +261,25 @@ const userMutations = {
       const result = await UserTodo.findByIdAndUpdate(
         { _id: todoId },
         { $set: { isStatus: true } }
+      );
+      return success(result);
+    } catch (error) {
+      // 必須のデータがnullだとエラーを返す
+      return { status: "error" };
+    }
+  },
+  /**
+   * todoの状態をfalseにする
+   *
+   * @param todoId - todoID
+   * @returns success : successステータス,更新したtodo情報
+   * @returns error : errorステータス
+   */
+  unChekedTodoStatus: async (_parent: any, { todoId }: any) => {
+    try {
+      const result = await UserTodo.findByIdAndUpdate(
+        { _id: todoId },
+        { $set: { isStatus: false } }
       );
       return success(result);
     } catch (error) {
