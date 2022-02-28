@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 /**
- *  ユーザースキーマ
+ *  ユーザースキーマ.
  *  @remarks
  *  - ユーザー名 : string
  *  - 職業タイプ : string
@@ -34,11 +34,13 @@ const UserSchema = new mongoose.Schema({
 export const User = mongoose.model("user", UserSchema);
 
 /**
- *  ユーザーURLスキーマ
+ *  ユーザーURLスキーマ.
  *  @remarks
+ *  -
+ *    - ユニークなID : string
+ *    - Url名 : string
+ *    - Url : string
  *  - ユーザーID : string
- *  - Url名 : string
- *  - Url : string
  */
 const UserUrlsSchema = new mongoose.Schema({
   user_urls: [
@@ -51,4 +53,26 @@ const UserUrlsSchema = new mongoose.Schema({
   userId: { type: String },
 });
 
-export const UserUrls = mongoose.model("userurls", UserUrlsSchema);
+export const UserUrls = mongoose.model("userurl", UserUrlsSchema);
+
+/**
+ *  ユーザーTodoスキーマ.
+ *  @remarks
+ *  -
+ *    - タイトル : string
+ *    - 説明 : string
+ *    - 開始日 : string
+ *    - 終了日 : string
+ *    - todo状態 : string
+ *    - ユーザーID : string
+ */
+const UseTodoSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  startedAt: String,
+  finishedAt: String,
+  isStatus: Boolean,
+  userId: String,
+});
+
+export const UserTodo = mongoose.model("userTodo", UseTodoSchema);

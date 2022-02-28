@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="-SmZYSLaklfBI4JRPdJP" name="ER図_ja">
-        <mxGraphModel dx="1000" dy="118" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2083" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -2384,7 +2384,7 @@
                         <mxRectangle width="159.99999999999997" height="40" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="LxPxPuxrTy9zbYdYyhDK-1070" value="" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="98" target="VyKvKrZ7QM3hgGX9hpGm-1018">
+                <mxCell id="LxPxPuxrTy9zbYdYyhDK-1070" value="" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="98" target="VyKvKrZ7QM3hgGX9hpGm-1018" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="1090" y="1390" as="sourcePoint"/>
                         <mxPoint x="1170" y="1630" as="targetPoint"/>
@@ -2393,21 +2393,24 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="LxPxPuxrTy9zbYdYyhDK-1071" value="ユーザー情報ID :  string" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="1">
+                <mxCell id="LxPxPuxrTy9zbYdYyhDK-1071" value="ユーザー情報ID :  string" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" parent="1" vertex="1">
                     <mxGeometry x="1200" y="1320" width="210" height="38.77" as="geometry">
                         <mxRectangle width="210" height="40" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="LxPxPuxrTy9zbYdYyhDK-1072" value="FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;" vertex="1" parent="1">
+                <mxCell id="LxPxPuxrTy9zbYdYyhDK-1072" value="FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;" parent="1" vertex="1">
                     <mxGeometry x="1160" y="1320" width="40" height="38.77" as="geometry">
                         <mxRectangle width="29" height="40" as="alternateBounds"/>
                     </mxGeometry>
+                </mxCell>
+                <mxCell id="1071" value="date型はStringでひとまず対応" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="1477" y="1620" width="180" height="20" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
     </diagram>
     <diagram name="ER図_en" id="0BC0x2vqDyF4JT6HGrAA">
-        <mxGraphModel dx="1874" dy="716" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="2083" dy="859" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="5vLuB-gRbie-JelBlSbu-0"/>
                 <mxCell id="5vLuB-gRbie-JelBlSbu-1" parent="5vLuB-gRbie-JelBlSbu-0"/>
@@ -4841,23 +4844,23 @@
                         <mxRectangle width="118.97999999999999" height="40" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="HiqQnKVyK0vnP-JAp_DL-0" value="userID" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="5vLuB-gRbie-JelBlSbu-1">
+                <mxCell id="HiqQnKVyK0vnP-JAp_DL-0" value="userID" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" parent="5vLuB-gRbie-JelBlSbu-1" vertex="1">
                     <mxGeometry x="1200" y="1320" width="118.97999999999999" height="40" as="geometry">
                         <mxRectangle width="118.97999999999999" height="40" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="HiqQnKVyK0vnP-JAp_DL-1" value="FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;" vertex="1" parent="5vLuB-gRbie-JelBlSbu-1">
+                <mxCell id="HiqQnKVyK0vnP-JAp_DL-1" value="FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;fontStyle=1;overflow=hidden;" parent="5vLuB-gRbie-JelBlSbu-1" vertex="1">
                     <mxGeometry x="1161.9" y="1320" width="38.1" height="40" as="geometry">
                         <mxRectangle width="29" height="40" as="alternateBounds"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="HiqQnKVyK0vnP-JAp_DL-2" value="" style="endArrow=none;html=1;" edge="1" parent="5vLuB-gRbie-JelBlSbu-1">
+                <mxCell id="HiqQnKVyK0vnP-JAp_DL-2" value="" style="endArrow=none;html=1;" parent="5vLuB-gRbie-JelBlSbu-1" edge="1">
                     <mxGeometry width="50" height="50" relative="1" as="geometry">
                         <mxPoint x="1200" y="1360" as="sourcePoint"/>
                         <mxPoint x="1200" y="1320" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="HiqQnKVyK0vnP-JAp_DL-3" value="" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="5vLuB-gRbie-JelBlSbu-1" source="5vLuB-gRbie-JelBlSbu-67">
+                <mxCell id="HiqQnKVyK0vnP-JAp_DL-3" value="" style="edgeStyle=elbowEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;startArrow=ERmandOne;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="5vLuB-gRbie-JelBlSbu-1" source="5vLuB-gRbie-JelBlSbu-67" edge="1">
                     <mxGeometry width="100" height="100" relative="1" as="geometry">
                         <mxPoint x="1090" y="1400" as="sourcePoint"/>
                         <mxPoint x="1160" y="1340" as="targetPoint"/>

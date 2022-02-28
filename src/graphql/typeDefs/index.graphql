@@ -39,6 +39,10 @@ type Mutation {
   # removeUserUrls(user: UserUrlsRemoveInput!): ResponseUserUrls!
 
   """
+  ユーザーの持つUrlを作成する：引数(ユーザーID, TechLeafID)
+  """
+  addTodo(todo: TodoAddInput): ResponseTodo!
+  """
   ユーザーがログインする：引数(ユーザーID, email, password)
   """
   userLogin(user: UserLoginInput!): ResponseUser!

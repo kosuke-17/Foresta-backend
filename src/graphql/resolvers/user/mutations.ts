@@ -1,5 +1,5 @@
 import { v4 as uuid } from "uuid";
-import { User, UserUrls } from "../../../models/User.model";
+import { User, UserTodo, UserUrls } from "../../../models/User.model";
 import { success } from "../responseStatus";
 import { UserType, UserTechLeafsType, UserLoginType } from "../types";
 
@@ -60,6 +60,7 @@ const userMutations = {
    *
    * @param user - ユーザー情報
    * @returns success : successステータス,作成したURL情報
+   * @returns error : errorステータス
    */
   createUserUrls: async (_parent: any, { user }: any) => {
     const { urlName, url, userId } = user;
@@ -86,6 +87,7 @@ const userMutations = {
    *
    * @param user - ユーザー情報
    * @returns success : successステータス,追加したURL情報
+   * @returns error : errorステータス
    */
   addUserUrls: async (_parent: any, { user }: any) => {
     const { urlName, url, userId } = user;
@@ -105,6 +107,7 @@ const userMutations = {
    *
    * @param user - ユーザー情報
    * @returns success : successステータス,追加したURL情報
+   * @returns error : errorステータス
    */
   // removeUserUrls: async (_parent: any, { user }: any) => {
   //   const { uId, userId, urlId } = user;
@@ -130,6 +133,7 @@ const userMutations = {
    *
    * @param user - ユーザー情報
    * @returns success : successステータス,技術を習得したユーザー
+   * @returns error : errorステータス
    */
   addUserTechLeafs: async (
     _parent: any,
@@ -154,6 +158,7 @@ const userMutations = {
    *
    * @param user - ユーザー情報
    * @returns success : successステータス,習得技術を削除したユーザー
+   * @returns error : errorステータス
    */
   removeUserTechLeafs: async (
     _parent: any,
@@ -169,6 +174,33 @@ const userMutations = {
       );
       return success(result);
     } catch (e) {
+      // 必須のデータがnullだとエラーを返す
+      return { status: "error" };
+    }
+  },
+  /**
+   * todoの追加.
+   *
+   * @param todo - todo情報
+   * @returns success : successステータス,習得技術を削除したユーザー
+   * @returns error : errorステータス
+   */
+  addTodo: async (_parent: any, { todo }: any) => {
+    const { title, description, startedAt, finishedAt, isStatus, userId } =
+      todo;
+    try {
+      const newTodo = new UserTodo({
+        title,
+        description,
+        startedAt,
+        finishedAt,
+        isStatus,
+        userId,
+      });
+
+      const result = newTodo.save();
+      return success(result);
+    } catch (error) {
       // 必須のデータがnullだとエラーを返す
       return { status: "error" };
     }
