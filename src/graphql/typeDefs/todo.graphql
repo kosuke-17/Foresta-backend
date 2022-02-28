@@ -12,7 +12,8 @@ type Todo {
 #リクエストボディ
 
 # todoを追加する情報
-input TodoAddInput {
+input TodoInput {
+  id: String
   title: String
   description: String
   startedAt: String

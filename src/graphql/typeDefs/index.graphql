@@ -41,11 +41,15 @@ type Mutation {
   """
   Todoを追加する：引数(タイトル,説明,開始日,終了日,状態,ユーザーID)
   """
-  addTodo(todo: TodoAddInput): ResponseTodo!
+  addTodo(todo: TodoInput): ResponseTodo!
   """
   Todoを削除する：引数(タイトル,説明,開始日,終了日,状態,ユーザーID)
   """
   removeTodo(todoId: String): ResponseTodo!
+  """
+  Todoを更新する：引数(タイトル,説明,開始日,終了日,状態,ユーザーID)
+  """
+  updateTodo(todo: TodoInput): ResponseTodo!
   """
   ユーザーがログインする：引数(ユーザーID, email, password)
   """

@@ -182,7 +182,7 @@ const userMutations = {
    * todoの追加.
    *
    * @param todo - todo情報
-   * @returns success : successステータス,習得技術を削除したユーザー
+   * @returns success : successステータス,追加したtodo情報
    * @returns error : errorステータス
    */
   addTodo: async (_parent: any, { todo }: any) => {
@@ -215,6 +215,35 @@ const userMutations = {
   removeTodo: async (_parent: any, { todoId }: any) => {
     try {
       const result = await UserTodo.deleteOne({ _id: todoId });
+      return success(result);
+    } catch (error) {
+      // 必須のデータがnullだとエラーを返す
+      return { status: "error" };
+    }
+  },
+  /**
+   * todoの編集.
+   *
+   * @param todo - todo情報
+   * @returns success : successステータス,更新したtodo情報
+   * @returns error : errorステータス
+   */
+  updateTodo: async (_parent: any, { todo }: any) => {
+    const { id, title, description, startedAt, finishedAt, isStatus, userId } =
+      todo;
+    try {
+      const result = await UserTodo.findByIdAndUpdate(
+        { _id: id },
+        {
+          $set: {
+            title: title,
+            description: description,
+            startedAt: startedAt,
+            finishedAt: finishedAt,
+            isStatus: isStatus,
+          },
+        }
+      );
       return success(result);
     } catch (error) {
       // 必須のデータがnullだとエラーを返す
