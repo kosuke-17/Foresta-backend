@@ -198,7 +198,23 @@ const userMutations = {
         userId,
       });
 
-      const result = newTodo.save();
+      const result = await newTodo.save();
+      return success(result);
+    } catch (error) {
+      // 必須のデータがnullだとエラーを返す
+      return { status: "error" };
+    }
+  },
+  /**
+   * todoの削除.
+   *
+   * @param todoId - todoId
+   * @returns success : successステータス
+   * @returns error : errorステータス
+   */
+  removeTodo: async (_parent: any, { todoId }: any) => {
+    try {
+      const result = await UserTodo.deleteOne({ _id: todoId });
       return success(result);
     } catch (error) {
       // 必須のデータがnullだとエラーを返す
