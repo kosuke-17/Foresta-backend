@@ -21,6 +21,15 @@ const userQueries = {
   getAllTodoByUser: async (_parent: any, { userId }: any) => {
     return await UserTodo.find({ userId: userId });
   },
+  /**
+   * todoIDに紐づいたのTodoを取得する
+   *
+   * @param todoId - todoID
+   * @returns todo一覧情報
+   */
+  getTodoByTodoId: async (_parent: any, { todoId }: any) => {
+    return await UserTodo.findById({ _id: todoId });
+  },
 };
 
 export default userQueries;
