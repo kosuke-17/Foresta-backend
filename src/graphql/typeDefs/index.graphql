@@ -1,19 +1,18 @@
-# コメントを追加したらサーバー再起動
 type Query {
   """
-  全てのユーザー情報を取得する
+  全てのユーザー情報を取得する.
   """
   getAllUser: [User!]
   """
-  _idに紐づくユーザー情報を取得する
+  _idに紐づくユーザー情報を取得する.
   """
   user(_id: String!): User!
   """
-  ユーザーのTodo一覧情報を取得する
+  ユーザーのTodo一覧情報を取得する.
   """
   getAllTodoByUser(userId: String): [Todo!]!
   """
-  ユーザーのTodo一覧情報を取得する
+  Todoに紐づいたTodo情報を取得する.
   """
   getTodoByTodoId(todoId: String): Todo!
   """
