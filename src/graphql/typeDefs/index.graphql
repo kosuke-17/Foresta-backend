@@ -9,6 +9,10 @@ type Query {
   """
   user(_id: String!): User!
   """
+  ユーザーのTodo一覧情報を取得する
+  """
+  getAllTodoByUser(userId: String): [Todo!]!
+  """
   それぞれのTechを取得する
   """
   getAllTechLeaf: [TechLeaf!]!
